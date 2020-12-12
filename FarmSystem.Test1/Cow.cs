@@ -1,12 +1,13 @@
-﻿using System;
+﻿using FarmSystem.Test2;
+using System;
 
 namespace FarmSystem.Test1
 {
-    public class Cow 
+    public class Cow : IAnimalName, IMilkableAnimal
     {
         private string _id;
         private int _noOfLegs = 4;
-
+        private string name;
 
         public string Id
         {
@@ -29,6 +30,18 @@ namespace FarmSystem.Test1
             }
         }
 
+        public string Name
+        {
+            get
+            {
+                return name;
+            }
+            set
+            {
+                name = value;
+            }
+        }
+
         public void Talk()
         {
             Console.WriteLine("Cow says Moo!");
@@ -41,7 +54,7 @@ namespace FarmSystem.Test1
 
         public void ProduceMilk()
         {
-            Console.WriteLine("Cow produced milk");
+            Console.WriteLine("Cow was milked!");
         }
 
         public void Run()

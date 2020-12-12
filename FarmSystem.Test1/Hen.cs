@@ -2,11 +2,11 @@
 
 namespace FarmSystem.Test1
 {
-    public class Hen 
+    public class Hen : IAnimalName
     {
         private string _id;
         private int _noOfLegs = 4;
-
+        private string name;
 
         public string Id
         {
@@ -16,8 +16,6 @@ namespace FarmSystem.Test1
                 _id = value;
             }
         }
-        
-
 
         public int NoOfLegs
         {
@@ -30,6 +28,19 @@ namespace FarmSystem.Test1
                 _noOfLegs = 4;
             }
         }
+
+        public string Name
+        {
+            get
+            {
+                return name;
+            }
+            set
+            {
+                name = value;
+            }
+        }
+
 
         public void Talk()
         {

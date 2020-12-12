@@ -2,11 +2,12 @@
 
 namespace FarmSystem.Test1
 {
-    public class Sheep 
+    public class Sheep : IAnimalName
     {
-       
+
         private string _id;
         private int _noOfLegs;
+        private string name;
 
         public string Id
         {
@@ -30,12 +31,24 @@ namespace FarmSystem.Test1
             }
         }
 
+        public string Name
+        {
+            get
+            {
+                return name;
+            }
+            set
+            {
+                name = value;
+            }
+        }
+
 
         public void Talk()
         {
             Console.WriteLine("Sheep says baa!");
         }
-        
+
         public void Run()
         {
             Console.WriteLine("Sheep is running");
