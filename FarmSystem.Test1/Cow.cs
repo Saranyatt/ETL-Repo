@@ -31,7 +31,7 @@ namespace FarmSystem.Test1
 
         public void Talk()
         {
-            Console.WriteLine("Cow says Moo!");
+            Console.WriteLine("Cow says Moo!!");
         }
 
         public void Walk()
